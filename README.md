@@ -32,3 +32,162 @@ Make sure to run the initial migration commands to update the database.
 
     Key: Authorization
     Value: "token_generated_during_login"
+
+### Sample CURL Req ####
+
+    GET : /user
+
+    curl -X 'GET' \
+    'http://127.0.0.1:5000/user/' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+
+
+    POST : /user
+
+    curl -X 'POST' \
+    'http://127.0.0.1:5000/user/' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "email": "abc1@gmail.com",
+    "username": "abc1",
+    "password": "11111"
+    }'
+
+
+    POST : /auth/login
+
+    curl -X 'POST' \
+    'http://127.0.0.1:5000/auth/login' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "email": "abc1@gmail.com",
+    "password": "11111"
+    }'
+
+
+    POST : /auth/logout
+
+    curl -X 'POST' \
+    'http://127.0.0.1:5000/auth/logout' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -d ''
+
+
+    GET : /device/
+
+    curl -X 'GET' \
+    'http://127.0.0.1:5000/device/' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+
+
+    POST : /device/
+
+    curl -X 'POST' \
+    'http://127.0.0.1:5000/device/' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "name": "Dev2",
+    "org_id": 1
+    }'
+
+
+    GET ​: /device​/{name}
+
+    curl -X 'GET' \
+    'http://127.0.0.1:5000/device/Dev2' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+
+
+    PUT : /device/{name}
+
+    curl -X 'PUT' \
+    'http://127.0.0.1:5000/device/Dev2' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "name": "Dev3",
+    "org_id": 1
+    }'
+
+
+
+    GET : /sensor/
+
+    curl -X 'GET' \
+    'http://127.0.0.1:5000/sensor/' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+
+
+    POST : /sensor/
+
+    curl -X 'POST' \
+    'http://127.0.0.1:5000/sensor/' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "name": "Vibration",
+    "device_id": 1
+    }'
+
+    GET : /sensor/{device_id}
+
+    curl -X 'GET' \
+    'http://127.0.0.1:5000/sensor/1' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+
+
+    GET : /sensor_data/
+
+    curl -X 'GET' \
+    'http://127.0.0.1:5000/sensor_data/' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+
+    
+    POST : /sensor_data/
+
+    curl -X 'POST' \
+    'http://127.0.0.1:5000/sensor_data/' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "sensor_id": 2,
+    "sensor_data": 40
+    }'
+
+
+    POST : /sensor_data/filter_data
+
+    curl -X 'POST' \
+    'http://127.0.0.1:5000/sensor_data/filter_data' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "sensor_id": 1,
+    "from": "2022-02-24T12:21:30.392390",
+    "to": "2022-02-24T12:21:40.392390"
+    }'
+
+
+    GET : /sensor_data/{sensor_id}
+
+    curl -X 'GET' \
+    'http://127.0.0.1:5000/sensor_data/1' \
+    -H 'accept: application/json' \
+    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'

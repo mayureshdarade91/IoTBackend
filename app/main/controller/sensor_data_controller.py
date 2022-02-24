@@ -4,7 +4,7 @@ from flask import request
 from flask_restx import Resource, reqparse, fields
 
 
-from ..util.dto import SensorDataDto, SensorDataFilterDto
+from ..util.dto import SensorDataDto
 from ..service.sensor_data_service import addNewSensorData, getAllSensorsData, getASensorData, getASensorDataAll
 from app.main.util.decorator import tokenRequired
 
