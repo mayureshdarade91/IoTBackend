@@ -49,8 +49,3 @@ class SensorDataDto:
         'sensor_data': fields.Integer(required=True, description='Sensor Data'),
         'timestamp': fields.DateTime(required=False, description='Register Date')
     })
-    sensor_dateRange = api.model('sensor_data', {
-        'sensor_id': fields.Integer(required=True, description='Sensor ID'),
-        'from': fields.DateTime(required=True, description='From DateTime'),
-        'to': fields.DateTime(required=True, description='To DateTime')
-    })

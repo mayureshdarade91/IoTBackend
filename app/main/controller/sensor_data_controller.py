@@ -1,16 +1,22 @@
 from unicodedata import name
 from xmlrpc.client import DateTime
 from flask import request
-from flask_restx import Resource, reqparse
+from flask_restx import Resource, reqparse, fields
 
-from ..util.dto import SensorDataDto
+
+from ..util.dto import SensorDataDto, SensorDataFilterDto
 from ..service.sensor_data_service import addNewSensorData, getAllSensorsData, getASensorData, getASensorDataAll
 from app.main.util.decorator import tokenRequired
 
 api = SensorDataDto.api
 _sensor = SensorDataDto.sensor_data
-sensor_dateRange = SensorDataDto.sensor_dateRange
 
+
+resource_fields = api.model('Resource', {
+    'sensor_id': fields.Integer,
+    'from':fields.DateTime,
+    'to':fields.DateTime
+})
 
 @api.route('/')
 class SensorList(Resource):
@@ -50,7 +56,7 @@ class Sensor(Resource):
 class Sensor(Resource):
     @api.doc('Get Sensor data in Date Range')
     @api.marshal_list_with(_sensor)
-    @api.expect(sensor_dateRange, validate=True)
+    @api.expect(resource_fields, validate=True)
     def post(self):
         """ Get Sensor data in Date Range """
         data = request.json

@@ -38,11 +38,11 @@ class Device(Resource):
     @api.marshal_with(_device)
     def get(self, name):
         """get a device given its identifier"""
-        user = getADevice(name)
-        if not user:
+        device = getADevice(name)
+        if not device:
             api.abort(404)
         else:
-            return user
+            return device
     
     @api.response(201, 'Device updated successfully.')
     @api.doc('Update Device')
