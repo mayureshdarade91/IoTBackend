@@ -40,7 +40,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'GET' \
     'http://127.0.0.1:5000/user/' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+    -H 'Authorization: XXXXX'
 
 
     POST : /user
@@ -48,7 +48,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'POST' \
     'http://127.0.0.1:5000/user/' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Authorization: XXXXX' \
     -H 'Content-Type: application/json' \
     -d '{
     "email": "abc1@gmail.com",
@@ -62,7 +62,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'POST' \
     'http://127.0.0.1:5000/auth/login' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Authorization: XXXXX' \
     -H 'Content-Type: application/json' \
     -d '{
     "email": "abc1@gmail.com",
@@ -75,7 +75,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'POST' \
     'http://127.0.0.1:5000/auth/logout' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Authorization: XXXXX' \
     -d ''
 
 
@@ -84,7 +84,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'GET' \
     'http://127.0.0.1:5000/device/' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+    -H 'Authorization: XXXXX'
 
 
     POST : /device/
@@ -92,7 +92,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'POST' \
     'http://127.0.0.1:5000/device/' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Authorization: XXXXX' \
     -H 'Content-Type: application/json' \
     -d '{
     "name": "Dev2",
@@ -105,7 +105,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'GET' \
     'http://127.0.0.1:5000/device/Dev2' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+    -H 'Authorization: XXXXX'
 
 
     PUT : /device/{name}
@@ -113,7 +113,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'PUT' \
     'http://127.0.0.1:5000/device/Dev2' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Authorization: XXXXX' \
     -H 'Content-Type: application/json' \
     -d '{
     "name": "Dev3",
@@ -127,7 +127,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'GET' \
     'http://127.0.0.1:5000/sensor/' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+    -H 'Authorization: XXXXX'
 
 
     POST : /sensor/
@@ -135,7 +135,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'POST' \
     'http://127.0.0.1:5000/sensor/' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Authorization: XXXXX' \
     -H 'Content-Type: application/json' \
     -d '{
     "name": "Vibration",
@@ -147,7 +147,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'GET' \
     'http://127.0.0.1:5000/sensor/1' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+    -H 'Authorization: XXXXX'
 
 
     GET : /sensor_data/
@@ -155,7 +155,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'GET' \
     'http://127.0.0.1:5000/sensor_data/' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+    -H 'Authorization: XXXXX'
 
     
     POST : /sensor_data/
@@ -163,7 +163,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'POST' \
     'http://127.0.0.1:5000/sensor_data/' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Authorization: XXXXX' \
     -H 'Content-Type: application/json' \
     -d '{
     "sensor_id": 2,
@@ -176,7 +176,7 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'POST' \
     'http://127.0.0.1:5000/sensor_data/filter_data' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw' \
+    -H 'Authorization: XXXXX' \
     -H 'Content-Type: application/json' \
     -d '{
     "sensor_id": 1,
@@ -190,4 +190,4 @@ Make sure to run the initial migration commands to update the database.
     curl -X 'GET' \
     'http://127.0.0.1:5000/sensor_data/1' \
     -H 'accept: application/json' \
-    -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDU3OTE4OTAsImlhdCI6MTY0NTcwNTQ4NSwic3ViIjoxfQ.GmAxg-IWZcy74GsKQYtSeHPZj7csaoete0lYjYwvWUw'
+    -H 'Authorization: XXXXX'
